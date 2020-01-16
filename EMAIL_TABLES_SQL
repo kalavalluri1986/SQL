@@ -1,0 +1,13 @@
+create table tenant (tenant_id Number,tenant_name varchar2(50));
+
+create table User (tenant_id Number,user_id varchar2(50),username varchar2(50),email varchar2(50),password varchar2(50),address_id number);
+
+create table address(address_id number,address_line1 varchar2(50),city varchar2(50),state varchar2(50),country varchar2(50));
+
+create table email_folders(category_id number,folder_name varchar2(50));
+
+create table email_content(content_id number,user_id number,email_content blob,category_id,recipient varchar2(50),creation_date datte,title varchar2(50));
+
+create table email_attachment(attachment_id number,content_id number,attachment clob);
+
+create table email_recipients(reciepient_id number,user_id number,recipeint_email varchar2(50),recipeint_name varchar2(50));
